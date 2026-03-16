@@ -1,0 +1,153 @@
+.travel-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.travel-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 18px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.travel-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.travel-card-header h3 {
+  color: var(--text);
+  font-size: 1.2rem;
+  margin: 0;
+  flex: 1;
+}
+
+.travel-card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-edit,
+.btn-delete {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.travel-card-body {
+  color: var(--muted);
+}
+
+.travel-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-label {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 14px;
+}
+
+.info-value {
+  color: var(--text);
+  font-size: 15px;
+}
+
+.info-value.budget {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.places-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.place-tag {
+  background: var(--surface);
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: var(--text);
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+.info-value.notes {
+  background: var(--surface);
+  padding: 10px;
+  border-radius: 8px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 1024px) {
+  .travel-list {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .travel-list {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .travel-card-actions {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .travel-card {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .travel-card-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .info-label {
+    font-size: 13px;
+  }
+
+  .info-value {
+    font-size: 14px;
+  }
+}
+
